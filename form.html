@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script>
+        function validateForm() {
+    //alert();
+   var fname = document.forms["myForm"]["fname"].value;
+    if (fname == "") {
+        alert("firstname must be filled out");
+        return false;
+    }
+    var lname = document.forms["myForm"]["lname"].value;
+    if (lname == "") {
+        alert("lastname must be filled out");
+        return false;
+    }
+       var email = document.forms["myForm"]["email"].value;
+     if (email == "") {
+        alert("email  must be filled out");
+        return false;
+    }
+     var password = document.forms["myForm"]["password"].value;
+     if(password.length<3){  
+     alert("Password must be at least 3 characters long.");  
+     return false;  
+     }
+    var address = document.forms["myForm"]["address"].value;
+    if (address == "") {
+        alert("address must be filled out");
+        return false;
+    }
+     var city = document.forms["myForm"]["city"].value;
+    if (city == "") {
+        alert("city must be filled out");
+        return false;
+    }
+}
+    
+</script>
+</head>
+    <body>
+        <style>
+           center{background-color:aliceblue;}
+           h1{color:blue;}
+            
+        </style>
+
+        <center><h1>registation form</h1>   
+        <form  name="myForm" method="post" onsubmit="validateForm()">
+        <tr>
+             <th>firstname</th>
+             <td>
+             <input type="text" name="fname" value=""></br></br>
+             </td>
+        </tr>
+        <tr>
+            <th>lastname</th>
+            <td>
+            <input type="text" name="lname" value=""></br></br>
+            </td>
+        </tr>
+         <tr>
+            <th>email</th>
+            <td>
+            <input type="text" name="email" value=""> </br> </br>
+            </td>
+        </tr>
+        <tr>
+            <th>password</th>
+            <td>
+            <input type="password" name="password"></br></br>
+            </td>
+        </tr>
+        <tr>
+            <th>address</th>
+            <td>
+            <textarea name="address"></textarea></td></br>
+        </tr>
+        <tr>
+        <th>city</th>
+        <td>
+            <input type = "checkbox"  name="city" value = "ahemdabad"> ahemdabad
+            <input type = "checkbox"  name="city" value = "mahemdabad"> mahemdabad
+            <input type = "checkbox" name="city"  value = "nadiyad"> nadiyad
+            <input type = "checkbox" name="city" value = "vadodra"> vadodra </br> </br>
+        </td>
+        </tr>
+        <input type="submit" value="submit">
+       
+</form>
+</center>
+</body>
+</html>
